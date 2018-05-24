@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block content %}
+
+<form id="post_form" method="POST" action="">
+
+         {% csrf_token %}
+           {{ form.as_p }}
+
+
+           <input type="submit" name="submit" value="Submit" />
+     </form>
+     <div class = "myclass">
+              Hello World!
+           </div>
+
+           <script>
+              alert(d3.select(".myclass").text());
+           </script>
+
+{% endblock %}
